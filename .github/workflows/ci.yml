@@ -1,4 +1,5 @@
 name: CI - Build & Push Docker Image
+# v0.0.1
 
 on:
   push:
