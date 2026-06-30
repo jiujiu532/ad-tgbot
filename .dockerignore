@@ -1,0 +1,50 @@
+# Git
+.git
+.gitignore
+
+# Documentation & Scripts
+*.md
+*.sh
+*.bat
+LICENSE
+PROJECT_SUMMARY.md
+
+# OpenCode
+.omo/
+
+# IDE
+.vscode/
+.idea/
+
+# Node modules (frontend will npm ci during build)
+frontend/node_modules/
+frontend/.vite/
+
+# Data & Sessions
+data/
+*.session
+*.session-journal
+
+# Python cache
+__pycache__/
+*.py[cod]
+venv/
+env/
+
+# Original project files
+promov2.py
+accounts.json
+
+# CI
+.github/
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+
+# Docker compose (Dockerfile 需要保留给构建用)
+docker-compose.yml

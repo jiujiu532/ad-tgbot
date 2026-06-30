@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  tgbot:
+    build: .
+    container_name: tg-ads-bot
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    volumes:
+      # 持久化数据库和 session 文件
+      - ./data:/app/data
+    environment:
+      - TZ=Asia/Shanghai
+      - DB_PATH=/app/data/tgbot.db
+      - PYTHONUNBUFFERED=1
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
